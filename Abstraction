@@ -1,0 +1,36 @@
+package oops;
+
+abstract class payment{
+	
+	abstract void here(); // this abstract class method name should be same for all the methods where extend by abstract class
+}
+
+
+class card extends payment{
+	
+	public void here() { // same abstract method name if we use diff method Name, it will throw error
+		
+		System.out.println("Paid using card details");
+	}
+}
+
+class UPI extends payment{
+	
+	public void here() { // same abstract method name if we use diff method Name, it will throw error
+	
+		System.out.println("Paid using UPI payment");
+
+}
+}
+public  class Abstraction {
+
+	
+	public static void main(String[] args) {
+
+		payment obj= new card(); 
+		payment objs = new UPI();
+		obj.here();
+		objs.here();
+	}
+
+}
