@@ -1,0 +1,37 @@
+package oops;
+
+import java.util.Scanner;
+
+class overrid{
+	
+	public int a=10;
+	public int b=10;
+	public int c = a+b;
+	public void method1() {
+		
+        System.out.println(c);
+		
+	}
+}
+public class PolymorphismOverridding extends overrid {
+
+	public void method1() {
+		
+	   super.method1(); // use this if prints original c
+
+	   Scanner scan = new Scanner(System.in);
+	   a=scan.nextInt();
+	   b=scan.nextInt();
+	   c=a+b;
+       System.out.println(c);
+
+	}
+	public static void main(String[] args) {
+
+		PolymorphismOverridding obj = new PolymorphismOverridding();
+		obj.method1();
+		
+	}
+
+
+}
