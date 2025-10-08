@@ -28,6 +28,9 @@ public class PolymorphismOverridding extends overrid {
 	}
 	public static void main(String[] args) {
 
+		//Same method name, same parameters, but in different classes (parent–child).
+       // example edit profile 
+		
 		PolymorphismOverridding obj = new PolymorphismOverridding();
 		obj.method1();
 		
