@@ -1,0 +1,28 @@
+package oops;
+
+public class Encapsulation {
+	
+	private String name = "kannan"; // hiding the private string variable 
+	public String set = "";
+	
+ public String nam() {  // store the variable in this public method
+	 
+	 return name;
+ }
+ 
+ public String set() { // Assign the stored variable to another variable which is in this method
+	 
+	 return this.set = name;
+	 
+ }
+
+	public static void main(String[] args) {
+
+		Encapsulation obj = new Encapsulation();
+        System.out.println(" UserName : " +obj.set() ); // if we call the assigned method, here hidden data will shows
+
+		
+		
+	}
+
+}
