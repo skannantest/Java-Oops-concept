@@ -1,0 +1,30 @@
+package oops;
+
+
+class inher{  // base class
+    int a = 10;
+    int b = 5;
+
+    public int method1() {
+        return a + b;
+    }
+}
+class inherit extends inher {  // derived class 
+        public int method2() {
+            return a - b;
+        }
+}
+
+public class Inheritance{
+	
+    public static void main(String[] args) {
+        	
+    	// create object for the derived class 
+    	
+    	    inherit obj = new inherit(); // access methods in different class by using single object
+            System.out.println("Addition: " + obj.method1());
+            System.out.println("Subtraction: " + obj.method2());
+        }
+    }
+
+
