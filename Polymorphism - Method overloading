@@ -1,0 +1,71 @@
+package oops;
+
+import java.util.Scanner;
+
+public class PolymorphismOverloading {
+	
+	static String UserEnteredID ;
+	static String UserEnteredNumber;
+	
+    static String actualID = "10";
+	static String actualNumber = "20";
+	static String name;
+
+	public void method1(String id, String number) { 
+		
+		if(UserEnteredID.equals(id) && UserEnteredNumber.equals(number)) {
+			
+		System.out.println("");
+
+		System.out.println("id :" +id);
+		System.out.println("number :" +number);
+		System.out.println("UserName : Suriya");
+		System.out.println("result : 426");
+		
+		}
+		else {
+			
+			System.out.println("Given ID " +UserEnteredID+ " and number " +UserEnteredNumber+ " is invalid");
+
+		}
+	}
+	
+	public void method1(String id) {
+		
+		System.out.println("");
+
+		System.out.println("Please enter the valid details and try again");
+
+	}
+	
+
+	public static void main(String[] args) {
+		
+// method overloading, passing different parameter for same method names so based on parament, the methods will be call
+
+		Scanner scan = new Scanner(System.in);
+		
+		PolymorphismOverloading obj= new PolymorphismOverloading();
+		
+		System.out.println("Enter your User ID :" );
+		UserEnteredID= scan.nextLine();
+		
+		System.out.println("Enter your User number :" );
+		UserEnteredNumber=scan.nextLine();
+		
+		if(UserEnteredNumber.trim().isEmpty() || UserEnteredID.trim().isEmpty()) {
+			
+        obj.method1(actualID);
+		
+	
+	}
+	else {
+		
+        obj.method1(actualID,actualNumber);
+
+	}
+	}
+	}
+	
+
+
