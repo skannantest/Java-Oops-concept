@@ -1,0 +1,32 @@
+package oops;
+
+class compose{
+	
+	public void method1() {
+		
+		System.out.println("Class number 1");
+	}
+}
+
+class compos{
+	
+	private compose obj= new compose();
+	
+	public void method1() {
+		
+		obj.method1();
+		System.out.println("Class number 2");
+
+	}
+}
+public class Composition {
+
+	public static void main(String[] args) {
+
+		compos obj=new compos();
+		obj.method1();
+		System.out.println("Class number 3");
+
+	}
+
+}
